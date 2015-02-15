@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB6474F61A909F1400D05F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6474F51A909F1400D05F34 /* AppDelegate.swift */; };
+		EB6474F81A909F1400D05F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6474F71A909F1400D05F34 /* ViewController.swift */; };
+		EB6474FB1A909F1400D05F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6474F91A909F1400D05F34 /* Main.storyboard */; };
+		EB6474FD1A909F1400D05F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6474FC1A909F1400D05F34 /* Images.xcassets */; };
+		EB6475001A909F1400D05F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */; };
+		EB64750C1A909F1400D05F34 /* HackBot_SoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB6475061A909F1400D05F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB6474E81A909F1400D05F34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB6474EF1A909F1400D05F34;
+			remoteInfo = "HackBot Sound";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB6474F01A909F1400D05F34 /* HackBot Sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackBot Sound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB6474F41A909F1400D05F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6474F51A909F1400D05F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB6474F71A909F1400D05F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB6474FA1A909F1400D05F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB6474FC1A909F1400D05F34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB6474FF1A909F1400D05F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EB6475051A909F1400D05F34 /* HackBot SoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HackBot SoundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB64750A1A909F1400D05F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackBot_SoundTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB6474ED1A909F1400D05F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB6475021A909F1400D05F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB6474E71A909F1400D05F34 = {
+			isa = PBXGroup;
+			children = (
+				EB6474F21A909F1400D05F34 /* HackBot Sound */,
+				EB6475081A909F1400D05F34 /* HackBot SoundTests */,
+				EB6474F11A909F1400D05F34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB6474F11A909F1400D05F34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB6474F01A909F1400D05F34 /* HackBot Sound.app */,
+				EB6475051A909F1400D05F34 /* HackBot SoundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB6474F21A909F1400D05F34 /* HackBot Sound */ = {
+			isa = PBXGroup;
+			children = (
+				EB6474F51A909F1400D05F34 /* AppDelegate.swift */,
+				EB6474F71A909F1400D05F34 /* ViewController.swift */,
+				EB6474F91A909F1400D05F34 /* Main.storyboard */,
+				EB6474FC1A909F1400D05F34 /* Images.xcassets */,
+				EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */,
+				EB6474F31A909F1400D05F34 /* Supporting Files */,
+			);
+			path = "HackBot Sound";
+			sourceTree = "<group>";
+		};
+		EB6474F31A909F1400D05F34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB6474F41A909F1400D05F34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB6475081A909F1400D05F34 /* HackBot SoundTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */,
+				EB6475091A909F1400D05F34 /* Supporting Files */,
+			);
+			path = "HackBot SoundTests";
+			sourceTree = "<group>";
+		};
+		EB6475091A909F1400D05F34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB64750A1A909F1400D05F34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB6474EF1A909F1400D05F34 /* HackBot Sound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB64750F1A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot Sound" */;
+			buildPhases = (
+				EB6474EC1A909F1400D05F34 /* Sources */,
+				EB6474ED1A909F1400D05F34 /* Frameworks */,
+				EB6474EE1A909F1400D05F34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HackBot Sound";
+			productName = "HackBot Sound";
+			productReference = EB6474F01A909F1400D05F34 /* HackBot Sound.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB6475041A909F1400D05F34 /* HackBot SoundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB6475121A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot SoundTests" */;
+			buildPhases = (
+				EB6475011A909F1400D05F34 /* Sources */,
+				EB6475021A909F1400D05F34 /* Frameworks */,
+				EB6475031A909F1400D05F34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB6475071A909F1400D05F34 /* PBXTargetDependency */,
+			);
+			name = "HackBot SoundTests";
+			productName = "HackBot SoundTests";
+			productReference = EB6475051A909F1400D05F34 /* HackBot SoundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB6474E81A909F1400D05F34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jack Cook";
+				TargetAttributes = {
+					EB6474EF1A909F1400D05F34 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EB6475041A909F1400D05F34 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EB6474EF1A909F1400D05F34;
+					};
+				};
+			};
+			buildConfigurationList = EB6474EB1A909F1400D05F34 /* Build configuration list for PBXProject "HackBot Sound" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB6474E71A909F1400D05F34;
+			productRefGroup = EB6474F11A909F1400D05F34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB6474EF1A909F1400D05F34 /* HackBot Sound */,
+				EB6475041A909F1400D05F34 /* HackBot SoundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB6474EE1A909F1400D05F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6474FB1A909F1400D05F34 /* Main.storyboard in Resources */,
+				EB6475001A909F1400D05F34 /* LaunchScreen.xib in Resources */,
+				EB6474FD1A909F1400D05F34 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB6475031A909F1400D05F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB6474EC1A909F1400D05F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6474F81A909F1400D05F34 /* ViewController.swift in Sources */,
+				EB6474F61A909F1400D05F34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB6475011A909F1400D05F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB64750C1A909F1400D05F34 /* HackBot_SoundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB6475071A909F1400D05F34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB6474EF1A909F1400D05F34 /* HackBot Sound */;
+			targetProxy = EB6475061A909F1400D05F34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB6474F91A909F1400D05F34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB6474FA1A909F1400D05F34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB6474FF1A909F1400D05F34 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB64750D1A909F1400D05F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB64750E1A909F1400D05F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB6475101A909F1400D05F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "HackBot Sound/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EB6475111A909F1400D05F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "HackBot Sound/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EB6475131A909F1400D05F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HackBot SoundTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackBot Sound.app/HackBot Sound";
+			};
+			name = Debug;
+		};
+		EB6475141A909F1400D05F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HackBot SoundTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackBot Sound.app/HackBot Sound";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB6474EB1A909F1400D05F34 /* Build configuration list for PBXProject "HackBot Sound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB64750D1A909F1400D05F34 /* Debug */,
+				EB64750E1A909F1400D05F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB64750F1A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot Sound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB6475101A909F1400D05F34 /* Debug */,
+				EB6475111A909F1400D05F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EB6475121A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot SoundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB6475131A909F1400D05F34 /* Debug */,
+				EB6475141A909F1400D05F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB6474E81A909F1400D05F34 /* Project object */;
+}
