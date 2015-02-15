@@ -101,6 +101,8 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesi
                 synthesizer.speakUtterance(utterance)
             } else if args[0] == "!swagwalk" {
                 spotifyPlayer.playURI(NSURL(string: "spotify:track:3kZoay4ANo86ehb6s4RwS9"), callback: nil)
+            } else if args[0] == "!stop" {
+                spotifyPlayer.stop(nil)
             }
         }
     
