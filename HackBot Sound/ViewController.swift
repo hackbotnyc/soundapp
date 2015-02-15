@@ -6,19 +6,33 @@
 //  Copyright (c) 2015 Jack Cook. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class ViewController: UIViewController, GCDAsyncSocketDelegate {
 
+    var player: AVAudioPlayer!
+    var spotifySession: SPTSession!
+    var spotifyPlayer: SPTAudioStreamingController!
+    
     var socket: GCDAsyncSocket!
     var tag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        spotifySession = SPTSession()
+        spotifyPlayer = SPTAudioStreamingController(clientId: "b773cebaa2cb4c86b5e49464cd5d4f25")
+        spotifyPlayer.loginWithSession(spotifySession, callback: { (error) -> Void in
+            if error != nil {
+                println(error.localizedDescription)
+            }
+        })
+        
         socket = GCDAsyncSocket(delegate: self, delegateQueue: dispatch_get_main_queue())
         
         socket.connectToHost("irc.esper.net", onPort: 6667, error: nil)
-        sendData("NICK hackbot\r\n")
+        sendData("NICK hackbotsound\r\n")
         sendData("USER hackbot irc.esper.net bla :HackBot\r\n")
     }
     
@@ -43,9 +57,40 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
             args.removeAtIndex(0)
             args[0] = args[0].stringByReplacingOccurrencesOfString(":", withString: "")
             
-            if args[0] == "!say" {
+            if args[0] == "!play" {
+                args.removeAtIndex(0)
+                let songTitle = " ".join(args)
+                
+                SPTRequest.performSearchWithQuery(songTitle, queryType: .QueryTypeTrack, session: spotifySession, callback: { (error, list) -> Void in
+                    let lp = list as SPTListPage
+                    
+                    if let ts = lp.items {
+                        let track = ts[0] as SPTPartialTrack
+                        SPTRequest.requestItemAtURI(track.uri, withSession: self.spotifySession, callback: { (error, t) -> Void in
+                            let track = t as SPTTrack
+                            self.spotifyPlayer.playTrackProvider(track, callback: { (error) -> Void in
+                                if error != nil {
+                                    println(error.localizedDescription)
+                                }
+                            })
+                        })
+                        /*self.spotifyPlayer.playURI(track.uri, callback: { (error) -> Void in
+                            if error != nil {
+                                println(error.localizedDescription)
+                            } else {
+                                println("playing \(track.name)")
+                            }
+                        })*/
+                    }
+                })
+            } else if args[0] == "!say" {
                 args.removeAtIndex(0)
                 let speechText = " ".join(args)
+                
+                let synthesizer = AVSpeechSynthesizer()
+                let utterance = AVSpeechUtterance(string: speechText)
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate
+                synthesizer.speakUtterance(utterance)
             }
         }
     

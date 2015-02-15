@@ -14,6 +14,7 @@
 		EB6474FD1A909F1400D05F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB6474FC1A909F1400D05F34 /* Images.xcassets */; };
 		EB6475001A909F1400D05F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */; };
 		EB64750C1A909F1400D05F34 /* HackBot_SoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */; };
+		EB7E9F1A1A90D25800CA4BA0 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7E9F191A90D25800CA4BA0 /* Spotify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		EB64750A1A909F1400D05F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackBot_SoundTests.swift; sourceTree = "<group>"; };
 		EB7E9F161A90A0B400CA4BA0 /* ObjectiveBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
+		EB7E9F191A90D25800CA4BA0 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = SOURCE_ROOT; };
 		ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CC14AD4E1AD6944CECF4D8D /* libPods.a in Frameworks */,
+				EB7E9F1A1A90D25800CA4BA0 /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 		EB6474F21A909F1400D05F34 /* HackBot Sound */ = {
 			isa = PBXGroup;
 			children = (
+				EB7E9F191A90D25800CA4BA0 /* Spotify.framework */,
 				EB6474F51A909F1400D05F34 /* AppDelegate.swift */,
 				EB6474F71A909F1400D05F34 /* ViewController.swift */,
 				EB6474F91A909F1400D05F34 /* Main.storyboard */,
@@ -398,6 +402,10 @@
 			baseConfigurationReference = 86D71E947693347FE33BA6DA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "HackBot Sound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +418,10 @@
 			baseConfigurationReference = ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "HackBot Sound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
