@@ -36,13 +36,15 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesi
         sendData("NICK hackbotsound\r\n")
         sendData("USER hackbot irc.esper.net bla :HackBot\r\n")
         log("Signing into IRC")
+        
+        let timer = NSTimer(timeInterval: 25, target: self, selector: "beep", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
     
     func socket(sock: GCDAsyncSocket!, didReadData data: NSData!, withTag tag: Int) {
         var message = NSString(data: data, encoding: NSUTF8StringEncoding)!
         message = message.stringByReplacingOccurrencesOfString("\n", withString: "")
         print(message)
-//        log(message)
         
         var args = message.componentsSeparatedByString(" ") as [String]
         
@@ -94,15 +96,24 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesi
             } else if args[0] == "!hi5" {
                 let synthesizer = AVSpeechSynthesizer()
                 synthesizer.delegate = nil
-                let utterance = AVSpeechUtterance(string: "High five.")
-                utterance.rate = 0.15
+                let utterance = AVSpeechUtterance(string: "High five")
+                utterance.rate = 0.1
                 synthesizer.speakUtterance(utterance)
-            } else {
-                println(args[0])
+            } else if args[0] == "!swagwalk" {
+                spotifyPlayer.playURI(NSURL(string: "spotify:track:3kZoay4ANo86ehb6s4RwS9"), callback: nil)
             }
         }
     
         sock.readDataWithTimeout(-1, tag: 0)
+    }
+    
+    func beep() {
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.delegate = nil
+        let utterance = AVSpeechUtterance(string: "Beep boop")
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate
+        synthesizer.speakUtterance(utterance)
+        log("Beep boop")
     }
     
     func socket(sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
