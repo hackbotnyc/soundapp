@@ -9,9 +9,9 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController, GCDAsyncSocketDelegate {
-
-    var player: AVAudioPlayer!
+class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesizerDelegate {
+    
+    var trackToPlay: SPTPartialTrack!
     
     var socket: GCDAsyncSocket!
     var tag = 0
@@ -55,26 +55,17 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
                 args.removeAtIndex(0)
                 let songTitle = " ".join(args)
                 
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.delegate = self
+                let utterance = AVSpeechUtterance(string: "The party train is here. Get your dancing shoes on.")
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate
+                synthesizer.speakUtterance(utterance)
+                
                 SPTRequest.performSearchWithQuery(songTitle, queryType: .QueryTypeTrack, session: spotifySession, callback: { (error, list) -> Void in
                     let lp = list as SPTListPage
                     
                     if let ts = lp.items {
-                        let track = ts[0] as SPTPartialTrack
-                        SPTRequest.requestItemAtURI(track.uri, withSession: spotifySession, callback: { (error, t) -> Void in
-                            let track = t as SPTTrack
-                            spotifyPlayer.playTrackProvider(track, callback: { (error) -> Void in
-                                if error != nil {
-                                    println(error.localizedDescription)
-                                }
-                            })
-                        })
-                        /*self.spotifyPlayer.playURI(track.uri, callback: { (error) -> Void in
-                            if error != nil {
-                                println(error.localizedDescription)
-                            } else {
-                                println("playing \(track.name)")
-                            }
-                        })*/
+                        self.trackToPlay = ts[0] as SPTPartialTrack
                     }
                 })
             } else if args[0] == "!say" {
@@ -82,6 +73,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
                 let speechText = " ".join(args)
                 
                 let synthesizer = AVSpeechSynthesizer()
+                synthesizer.delegate = nil
                 let utterance = AVSpeechUtterance(string: speechText)
                 utterance.rate = AVSpeechUtteranceMinimumSpeechRate
                 synthesizer.speakUtterance(utterance)
@@ -91,17 +83,16 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         sock.readDataWithTimeout(-1, tag: 0)
     }
     
-    func socket(sock: GCDAsyncSocket!, didReadPartialDataOfLength partialLength: UInt, tag: Int) {
-        println("partial data")
-    }
-    
     func socket(sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
-        println("connected")
         sock.readDataWithTimeout(-1, tag: 0)
     }
     
-    func socketDidDisconnect(sock: GCDAsyncSocket!, withError err: NSError!) {
-        println("disconnect")
+    func speechSynthesizer(synthesizer: AVSpeechSynthesizer!, didFinishSpeechUtterance utterance: AVSpeechUtterance!) {
+        spotifyPlayer.playURI(trackToPlay.uri, callback: { (error) -> Void in
+            if error != nil {
+                println(error.localizedDescription)
+            }
+        })
     }
     
     func sendData(string: String) {
