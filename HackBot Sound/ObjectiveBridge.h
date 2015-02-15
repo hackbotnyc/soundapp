@@ -7,4 +7,5 @@
 //
 
 #import "GCDAsyncSocket.h"
+#import "SSKeychain.h"
 #import <Spotify/Spotify.h>

@@ -19,9 +19,13 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let spotifyAuth = SPTAuth.defaultInstance()
-        let spotifyLoginURL = spotifyAuth.loginURLForClientId(spotifyClientID, declaredRedirectURL: NSURL(string: spotifyCallbackURL), scopes: [SPTAuthStreamingScope, SPTAuthUserLibraryReadScope])
-        UIApplication.sharedApplication().openURL(spotifyLoginURL)
+        if SSKeychain.passwordForService("hackbot", account: "spotify") != nil {
+            authenticateSpotify()
+        } else {
+            let spotifyAuth = SPTAuth.defaultInstance()
+            let spotifyLoginURL = spotifyAuth.loginURLForClientId(spotifyClientID, declaredRedirectURL: NSURL(string: spotifyCallbackURL), scopes: [SPTAuthStreamingScope, SPTAuthUserLibraryReadScope])
+            UIApplication.sharedApplication().openURL(spotifyLoginURL)
+        }
         
         socket = GCDAsyncSocket(delegate: self, delegateQueue: dispatch_get_main_queue())
         
@@ -55,10 +59,11 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate, AVSpeechSynthesi
                 args.removeAtIndex(0)
                 let songTitle = " ".join(args)
                 
+                spotifyPlayer.stop(nil)
                 let synthesizer = AVSpeechSynthesizer()
                 synthesizer.delegate = self
                 let utterance = AVSpeechUtterance(string: "The party train is here. Get your dancing shoes on.")
-                utterance.rate = AVSpeechUtteranceMinimumSpeechRate
+                utterance.rate = 0.1
                 synthesizer.speakUtterance(utterance)
                 
                 SPTRequest.performSearchWithQuery(songTitle, queryType: .QueryTypeTrack, session: spotifySession, callback: { (error, list) -> Void in
