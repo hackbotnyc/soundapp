@@ -12,8 +12,6 @@ import UIKit
 class ViewController: UIViewController, GCDAsyncSocketDelegate {
 
     var player: AVAudioPlayer!
-    var spotifySession: SPTSession!
-    var spotifyPlayer: SPTAudioStreamingController!
     
     var socket: GCDAsyncSocket!
     var tag = 0
@@ -21,13 +19,9 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        spotifySession = SPTSession()
-        spotifyPlayer = SPTAudioStreamingController(clientId: "b773cebaa2cb4c86b5e49464cd5d4f25")
-        spotifyPlayer.loginWithSession(spotifySession, callback: { (error) -> Void in
-            if error != nil {
-                println(error.localizedDescription)
-            }
-        })
+        let spotifyAuth = SPTAuth.defaultInstance()
+        let spotifyLoginURL = spotifyAuth.loginURLForClientId(spotifyClientID, declaredRedirectURL: NSURL(string: spotifyCallbackURL), scopes: [SPTAuthStreamingScope, SPTAuthUserLibraryReadScope])
+        UIApplication.sharedApplication().openURL(spotifyLoginURL)
         
         socket = GCDAsyncSocket(delegate: self, delegateQueue: dispatch_get_main_queue())
         
@@ -66,9 +60,9 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
                     
                     if let ts = lp.items {
                         let track = ts[0] as SPTPartialTrack
-                        SPTRequest.requestItemAtURI(track.uri, withSession: self.spotifySession, callback: { (error, t) -> Void in
+                        SPTRequest.requestItemAtURI(track.uri, withSession: spotifySession, callback: { (error, t) -> Void in
                             let track = t as SPTTrack
-                            self.spotifyPlayer.playTrackProvider(track, callback: { (error) -> Void in
+                            spotifyPlayer.playTrackProvider(track, callback: { (error) -> Void in
                                 if error != nil {
                                     println(error.localizedDescription)
                                 }

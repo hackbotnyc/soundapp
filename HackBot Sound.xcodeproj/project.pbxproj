@@ -15,6 +15,7 @@
 		EB6475001A909F1400D05F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */; };
 		EB64750C1A909F1400D05F34 /* HackBot_SoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */; };
 		EB7E9F1A1A90D25800CA4BA0 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7E9F191A90D25800CA4BA0 /* Spotify.framework */; };
+		EB7E9F1C1A90DE6400CA4BA0 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E9F1B1A90DE6400CA4BA0 /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackBot_SoundTests.swift; sourceTree = "<group>"; };
 		EB7E9F161A90A0B400CA4BA0 /* ObjectiveBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
 		EB7E9F191A90D25800CA4BA0 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = SOURCE_ROOT; };
+		EB7E9F1B1A90DE6400CA4BA0 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */,
 				EB6474F31A909F1400D05F34 /* Supporting Files */,
 				EB7E9F161A90A0B400CA4BA0 /* ObjectiveBridge.h */,
+				EB7E9F1B1A90DE6400CA4BA0 /* Authentication.swift */,
 			);
 			path = "HackBot Sound";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				EB6474F81A909F1400D05F34 /* ViewController.swift in Sources */,
 				EB6474F61A909F1400D05F34 /* AppDelegate.swift in Sources */,
+				EB7E9F1C1A90DE6400CA4BA0 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
