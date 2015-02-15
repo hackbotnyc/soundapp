@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CC14AD4E1AD6944CECF4D8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CFE92262CB97DCBCE9B7458 /* libPods.a */; };
 		EB6474F61A909F1400D05F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6474F51A909F1400D05F34 /* AppDelegate.swift */; };
 		EB6474F81A909F1400D05F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6474F71A909F1400D05F34 /* ViewController.swift */; };
 		EB6474FB1A909F1400D05F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6474F91A909F1400D05F34 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CFE92262CB97DCBCE9B7458 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D71E947693347FE33BA6DA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB6474F01A909F1400D05F34 /* HackBot Sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackBot Sound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6474F41A909F1400D05F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6474F51A909F1400D05F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,8 @@
 		EB6475051A909F1400D05F34 /* HackBot SoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HackBot SoundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64750A1A909F1400D05F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB64750B1A909F1400D05F34 /* HackBot_SoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackBot_SoundTests.swift; sourceTree = "<group>"; };
+		EB7E9F161A90A0B400CA4BA0 /* ObjectiveBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
+		ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC14AD4E1AD6944CECF4D8D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		197D51D27F036CD3FC0FBAFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86D71E947693347FE33BA6DA /* Pods.debug.xcconfig */,
+				ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F5EA901B2405268CA9B2168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CFE92262CB97DCBCE9B7458 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB6474E71A909F1400D05F34 = {
 			isa = PBXGroup;
 			children = (
 				EB6474F21A909F1400D05F34 /* HackBot Sound */,
 				EB6475081A909F1400D05F34 /* HackBot SoundTests */,
 				EB6474F11A909F1400D05F34 /* Products */,
+				197D51D27F036CD3FC0FBAFF /* Pods */,
+				6F5EA901B2405268CA9B2168 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +108,7 @@
 				EB6474FC1A909F1400D05F34 /* Images.xcassets */,
 				EB6474FE1A909F1400D05F34 /* LaunchScreen.xib */,
 				EB6474F31A909F1400D05F34 /* Supporting Files */,
+				EB7E9F161A90A0B400CA4BA0 /* ObjectiveBridge.h */,
 			);
 			path = "HackBot Sound";
 			sourceTree = "<group>";
@@ -119,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB64750F1A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot Sound" */;
 			buildPhases = (
+				C399132B10B37AC02C035922 /* Check Pods Manifest.lock */,
 				EB6474EC1A909F1400D05F34 /* Sources */,
 				EB6474ED1A909F1400D05F34 /* Frameworks */,
 				EB6474EE1A909F1400D05F34 /* Resources */,
+				9748282D46587D80527764FD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +234,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9748282D46587D80527764FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C399132B10B37AC02C035922 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB6474EC1A909F1400D05F34 /* Sources */ = {
@@ -334,21 +395,25 @@
 		};
 		EB6475101A909F1400D05F34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D71E947693347FE33BA6DA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HackBot Sound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackBot Sound/ObjectiveBridge.h";
 			};
 			name = Debug;
 		};
 		EB6475111A909F1400D05F34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED444E3BFB19DF21A5E44536 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HackBot Sound/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackBot Sound/ObjectiveBridge.h";
 			};
 			name = Release;
 		};
@@ -405,6 +470,7 @@
 				EB6475111A909F1400D05F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB6475121A909F1400D05F34 /* Build configuration list for PBXNativeTarget "HackBot SoundTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +479,7 @@
 				EB6475141A909F1400D05F34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
